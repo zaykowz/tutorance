@@ -2,19 +2,38 @@
 <html>
 <head>
   <title>WEBRTC</title>
+  <style>
+    section {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 10px;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
-  
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-6">
-              <h2>Envoie</h2>
-              <video id="emitter-video"></video>
-              <p>
-                  <textarea id="offer" class="form-control"></textarea>
-                  <button id="start">Demarrer la video</button>
-              </p>
+    <section>
+        <h2>Reception</h2>
+        <video id="receiver-video"></video>
+        <textarea id="offer" class="form-control"></textarea>
+        </section>
             </div>
+            <p>
+              <button id="start" class="btc btn-primary">Demarrer la video</button>
+          </p>
+            <section>
+                <h2>Envoie</h2>
+                      <video id="emitter-video"></video>
+                      <form id="incoming">
+                      <div class="form-group">
+                      <textarea class="form-control"></textarea>
+                      </div>
+                      <p>
+                      <button type="submit">Enregistrer l'offre</button>
+                      </p>
+                    </section>
+                  </form>
         </div>
     </div>
     <script src="SimplePeer.js"></script>
